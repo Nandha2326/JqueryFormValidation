@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration</title>
+  <link rel="icon" href="./img/image.png">
+  <link rel="stylesheet" href="./formValidate.css">
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+  crossorigin="anonymous">
+  <!-- JQUERY CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- FONTAWESOME -->
+  <script src="https://kit.fontawesome.com/0e0f65d16f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- <img src="/images/image.png" alt=""> -->
+  <div class="form-cont">
+    <h2 class="head ">Registration Form</h2>
+    <form class="form">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div>
+              <label for="fname">FistName:</label><br>
+              <input type="text" id="fname" name="firstname">
+              <p id="firstname" style="color: red;"></p>
+              <!-- FOR JQUERY -->
+              <!-- <p class="alertShow  alert-None" id="alert-fname">Please Enter Your Name</p> -->
+            </div>
+            <div>
+              <label for="lname">LastName:</label><br>
+              <input type="text" id="lname" name="LastName"><br>
+              <p id="lastname" style="color: red;"></p>
+            </div>
+            <div>
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email"><br>
+              <p id="mail" style="color: red;"></p>
+            </div>
+            <div>
+              <label for="MobileNo">Mobile Number:</label><br>
+              <input type="tel" id="MobileNo" name="Mobile Number"><br>
+              <p id="No" style="color: red;"></p>
+            </div>
+            <div>
+              <label for="Age">Age:</label><br>
+              <input type="number" id="Age" name="Age"><br>
+              <p id="Agee" style="color: red;"></p>
+            </div>
+            <div>
+              <div class=""> Address:<br>
+                <textarea id="Addre" type="text"></textarea><br>
+                <p id="Address" style="color: red;"></p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col">
+            Gender:<br>
+            <div class="gender">
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label><br>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label><br>
+              <p id="alert-gender" style="color: red;"></p>
+            </div>
+            Skills:<br>
+            <div class="Skills">
+              <input type="checkbox" id="c" name="Skills" value="c">
+              <label for="c">c</label><br>
+              <input type="checkbox" id="c++" name="Skills" value="c++">
+              <label for="c++">c++</label><br>
+              <input type="checkbox" id="Javascript" name="Skills" value="Javascript">
+              <label for="Javascript">Javascript</label><br>
+              <p id="alert-Skills" style="color: red;"></p>
+            </div><br>
+           <div>
+            <label for="Qualification">Qualification&nbsp;:&nbsp;</label>
+            <select id="Qualification" name="Qualification">
+              <option value="">Select&nbsp;&nbsp;</option>
+              <option value="Bsc" >Bsc</option>
+              <option value="B.E" >B.E</option>
+              <option value="Msc">Msc</option>
+            </select>
+            <p id="alert-Qual" style="color: red;"></p>
+           </div><br>
+            <div>
+              <label for="ProfilePic">Profile Pic:</label><br>
+              <input type="file"id="ProfilePic" onchange="changeImage(this)" name="Profile"><br>
+              <p id="Profile" style="color: red;"></p>
+              <div id="Prof" ></div>
+            </div> 
+          </div>
+        </div>
+        <div class="agree">
+          <input id="Agreebox" name="Agree" type="checkbox"> <p style="display: inline-block;" id="agww">I Agree the terms and Conditon</p> 
+        </div>
+      </div>
+      <div class="Register ">
+        <button type="submit" class="sub" onclick="Validate()">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script src="formValidate.js"></script>
+</body>
+
+</html>
